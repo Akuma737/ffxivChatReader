@@ -11,5 +11,11 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    file = open('/home/akuruma/ffxivChatLogs/0000000c.log', "rb")
 
+    byte = file.read(1)
+
+    while byte:
+        print(byte)
+        byte = file.read(1)
+    file.close()
